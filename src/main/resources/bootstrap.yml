@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: vendor-service
+  config:
+      import: "optional:configserver:"
+  cloud:
+    config:
+      ##enabled: true
+      ##name: vendor-microservice
+      uri: http://localhost:8888
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'refresh'
+
